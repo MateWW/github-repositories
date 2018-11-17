@@ -1,0 +1,106 @@
+{
+    "rulesDirectory": [
+        "tslint-plugin-prettier"
+    ],
+    "rules": {
+        "prettier": true,
+        "import-blacklist": [
+            true
+        ],
+        "member-access": [
+            true,
+            "check-accessor"
+        ],
+        "member-ordering": false,
+        "no-internal-module": true,
+        "no-namespace": [
+            true,
+            "allow-declarations"
+        ],
+        "no-var-requires": true,
+        "no-reference": true,
+        "typedef": [
+            true,
+            "call-signature",
+            "parameter",
+            "property-declaration" 
+        ],
+        "no-inferrable-types": false,
+        "typedef-whitespace": false,
+        "curly": true,
+        "label-position": true,
+        "no-arg": true,
+        "no-conditional-assignment": true,
+        "no-console": [
+            true,
+            "log",
+            "debug"
+        ],
+        "no-construct": true,
+        "no-debugger": true,
+        "no-duplicate-variable": true,
+        "no-empty": true,
+        "no-eval": true,
+        "no-for-in-array": false,
+        "no-shadowed-variable": true,
+        "no-string-literal": false,
+        "no-switch-case-fall-through": true,
+        "no-unsafe-finally": true,
+        "no-unused-expression": true,
+        "no-use-before-declare": false,
+        "no-var-keyword": true,
+        "radix": true,
+        "restrict-plus-operands": false,
+        "switch-default": true,
+        "use-isnan": true,
+        "eofline": true,
+        "linebreak-style": [
+            true,
+            "LF"
+        ],
+        "max-file-line-count": [
+            true,
+            400
+        ],
+        "no-default-export": true,
+        "no-mergeable-namespace": true,
+        "no-require-imports": true,
+        "no-trailing-whitespace": true,
+        "class-name": true,
+        "interface-name": [
+            true,
+            "never-prefix"
+        ],
+        "new-parens": true,
+        "no-angle-bracket-type-assertion": true,
+        "object-literal-key-quotes": [
+            true,
+            "as-needed"
+        ],
+        "object-literal-shorthand": true,
+        "one-line": [
+            true,
+            "check-catch",
+            "check-else",
+            "check-finally",
+            "check-open-brace",
+            "check-whitespace"
+        ],
+        "one-variable-per-declaration": [
+            true
+        ],
+        "ordered-imports": true,
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-leading-underscore",
+            "allow-trailing-underscore"
+        ],
+        "triple-equals": true,
+        "max-line-length": [
+            false,
+            120
+        ]
+    }
+}
