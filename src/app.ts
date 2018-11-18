@@ -1,3 +1,2 @@
+import './reposList/index';
 import './style.scss';
-
-console.log('test');
