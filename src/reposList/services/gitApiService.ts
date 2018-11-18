@@ -1,3 +1,4 @@
+import { createGitApiState, GitApiState } from '../model/GitApiState';
 import { GithubRepository } from '../model/GithubRepository';
 import { HttpService } from './httpService';
 
@@ -18,10 +19,20 @@ export class GitApiService {
         this.subscribers = [...this.subscribers, fn];
     }
 
-    public loadUsers(user: string): void {
+    public getState(): GitApiState {
+        return createGitApiState(this.error, this.data, this.pending);
+    }
+
+    public loadUsers(user: string, updatedAt: Date): void {
         this.setPending(true);
         this.http
-            .get<GithubRepository[]>(`${this.apiUrl}/users/${user}/repos`)
+            .get<GithubRepository[]>(`${this.apiUrl}/users/${user}/repos`, { sort: 'updated', direction: 'asc' })
+            .then(repositories => {
+                const index = repositories.findIndex(
+                    ({ updated_at }) => new Date(updated_at).getTime() >= new Date(updatedAt).getTime(),
+                );
+                return index < 0 ? [] : repositories.slice(index, repositories.length - 1);
+            })
             .then(repositories => this.setRepositories(repositories))
             .catch(err => this.parseError(err));
     }

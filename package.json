@@ -6,7 +6,9 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config  webpack.dev.config.js",
-    "dev": "webpack-dev-server --config  webpack.dev.config.js"
+    "dev": "webpack-dev-server --config  webpack.dev.config.js",
+    "lint": "tslint --project .",
+    "lintFix": "tslint --project . --fix"
   },
   "devDependencies": {
     "css-loader": "^1.0.1",
