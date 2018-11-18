@@ -1,0 +1,43 @@
+@import 'vars';
+
+.repositories-box {
+    width: 100%;
+    padding: $verticalMargins $horizontalMargins;
+    box-sizing: border-box;
+    border: 1px solid $darkBlue;
+    overflow: hidden;
+
+    h1.title {
+        color: $midnightBlue;
+        margin: 0;
+    }
+
+    p.title {
+        color: $concrete;
+        margin: 0;
+        margin-bottom: $verticalMargins;
+    }
+
+    .repositories-table-header-row {
+        text-align: left;
+        box-sizing: border-box;        
+    }
+
+    .repositories-table-header {
+        color: $darkBlue;
+    }
+
+    .repositories-table-box {
+        overflow: auto;
+        min-width: 100%;
+    }
+
+    .repositories-table-element, .repositories-table-header {
+        padding: 5px 10px;
+    }
+
+    .keep-together {
+        white-space: nowrap;
+        word-wrap: none;
+    }
+}
